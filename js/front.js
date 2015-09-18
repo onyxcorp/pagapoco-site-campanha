@@ -115,6 +115,27 @@
 				}, 2000);
 				return false;
 			});
+
+			// GA Events
+				// Send Event of new register already on the Form Callback
+
+				// Play Video
+				$('#cadastro').on( 'click', function() {
+					ga('send','event', 'app', 'viewRegister');
+					return false;
+				});
+
+				// View Video
+				$('#video').on( 'click', function() {
+					ga('send','event', 'app', 'viewVideo');
+					return false;
+				});
+
+				// Play Video
+				$('#viewVideo').on( 'click', function() {
+					ga('send','event', 'app', 'playVideo');
+					return false;
+				});
 			
 		},
 		/**************************************************************************************************************************************************/
@@ -177,11 +198,6 @@
 		/** wrap inputs with additional markup **/
 		wrapFormInputs: function() {
 
-			var uid = new IdGenerator;
-
-			$('#unique-id').val(uid.generate(Date.now()));
-
-			
 			var $inputs = $('input[type=text], input[type=number], input[type=password], input[type=email], input[type=search], input[type=tel], input[type=url], textarea, select');
 			
 			$inputs.wrap('<div class="input-wrapper"></div>');
@@ -535,8 +551,6 @@
 				
 				var form = $(this);
 
-				var uniqueID = $('#unique-id').val();
-
 				var nameInput = $('#input-name');
 				var name = nameInput.val();
 		
@@ -593,9 +607,8 @@
 						$('#contact-form').fadeTo(500, '0.7');
 					},
 					success: function() {
-				
 						form.html( '<h4>Cadastro Realizado com Sucesso!</h4>' ).css('opacity', '1');
-				
+						ga('send','event', 'app', 'register');
 					}
 				});
 				

@@ -26,6 +26,16 @@
 	<link href="css/libs/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
 	<!-- Load primary stylesheet -->
 	<link rel="stylesheet" href="css/skin.css" type="text/css" media="all">
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+					(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-67750994-1', 'auto');
+		ga('send', 'pageview');
+
+	</script>
 </head>
 <body class="home home-app preloader one-page transparent-header parallax-footer">
 
@@ -288,7 +298,7 @@
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2">
 						<h1>Assista ao Video</h1>
-						<a href="https://www.youtube.com/watch?v=7Umag0qO6HE" class="button-video-play lightbox wow wobble"></a>
+						<a href="https://www.youtube.com/watch?v=7Umag0qO6HE" id='playVideo' class="button-video-play lightbox wow wobble"></a>
 						<div class="video-description">Conheça o Pagapo.co<br />1:00</div>
 					</div>
 				</div>
@@ -415,8 +425,6 @@
 <!-- JQuery can be loaded from CDN, change SRC attribute into "//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" -->
 <script src="js/libs/jquery.min.js"></script>
 <script src="js/libs/jquery.youtube.js"></script>
-<script src="js/libs/generator.js"></script>
-
 
 <!--
     Here we load all JS libs, packed into one single file to increase loading speed
